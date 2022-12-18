@@ -25,6 +25,7 @@ The telegram bot **HERDAY** developed by our Team **Brainy Bytes** is a a menstr
 ```shell
 $ sudo apt-get install python3-pip
 ```
+
 pip: -r requirements.txt
 
 
