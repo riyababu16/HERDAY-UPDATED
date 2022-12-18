@@ -31,16 +31,15 @@ $ sudo apt-get install python3-pip
 $ pip: -r requirements.txt
 ```shell
 
-## Bot working demonstration:![screenshot HERDAY Bot Chat](https://user-images.githubusercontent.com/120733525/208286124-eae0bfd5-488d-48f7-ac78-3703c94d66bb.jpg)
+## Bot working demonstration:
 
-![screenshot HERDAY Bot Chat](https://user-images.githubusercontent.com/120733525/208286012-274dff42-120f-4372-ad56-ec477efe464c.jpg)
-
-```
 
 
 
 ## Bugs Found:
-We were not able to complete our project within the specified time.
+
+As of now ,no errors or bugs were found.But We were not able to inculcate some of the features which we intially planned like providing information about the diet plan to help reduce discomfort during menstrual cycle.
+
 
 
   
