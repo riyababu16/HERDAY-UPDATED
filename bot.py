@@ -1,13 +1,17 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes , ConversationHandler, MessageHandler, filters
+from datetime import datetime, timedelta
 
 PERIOD_LENGTH, CYCLE_LENGTH, LAST_DATE = range(3)
 user_data = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text("Welcome to HerDay Period Tracker!")
-    await update.message.reply_text("Thanks for connecting with Herday")
-    await update.message.reply_text("What is your period length?")
+    await update.message.reply_text("Hello! Welcome to HerDay period tracker.")
+    await update.message.reply_text("Please answer a few questions to help personalise your experience.")
+    await update.message.reply_text(
+        "What's your period length?\n\n"
+        "Please enter a number in days (Example :5)"
+    )
     return PERIOD_LENGTH
 
 async def period_length(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -24,7 +28,10 @@ async def period_length(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def cycle_length(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global user_data
-    user_data["user_cycle_length"] = update.message.text
+    try:
+        user_data["user_cycle_length"] = int(update.message.text)
+    except:
+        await update.message.reply_text("Please enter a numeric value")
     await update.message.reply_text(
         "When did your last period start?\n\n"
         "Please enter date in the format DD/MM/YYYY")
@@ -32,12 +39,17 @@ async def cycle_length(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def last_date(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global user_data
-    user_data["user_last_date"] = update.message.text
+    user_data["user_last_date"] = str(update.message.text)
     await update.message.reply_text(
         "Here are your results\n\n"
         f"Period Length: {user_data['user_period_length']}\n"
         f"Cycle Length: {user_data['user_cycle_length']}\n"
         f"Last Period: {user_data['user_last_date']}\n")
+    LD=datetime.strptime(user_data["user_last_date"], '%d/%m/%Y')
+    user_data["next_period"]=LD+ timedelta(days= user_data['user_cycle_length'])
+    NEXT_PERIOD=user_data["next_period"].strftime('%d/%m/%Y')
+    await update.message.reply_text("Your next period date is expected to be on:")
+    await update.message.reply_text(NEXT_PERIOD)
     user_data = {}
     return ConversationHandler.END
 
