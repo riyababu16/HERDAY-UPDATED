@@ -29,6 +29,8 @@ $ sudo apt-get install python3-pip
 
 ```shell
 pip: -r requirements.txt
+```shell
+
 **Bot working demonstration
 ![screenshot HERDAY Bot Chat](https://user-images.githubusercontent.com/120733525/208286012-274dff42-120f-4372-ad56-ec477efe464c.jpg)
 
