@@ -15,12 +15,21 @@ The telegram bot **HERDAY** developed by our Team **Brainy Bytes** is a a menstr
 **4.**[RIYA M BABU]
 
 ## Libraries Used:
-      -update
-      -responses
-      -load_dotenv
-      -ApplicationBuilder
-      -CommandHandler
-      -ContextTypes
+      -
+      
+      
+      
+      
+      
+      
+      
+##How to Configure:
+
+**1.**Installing pip[python Package Manager]
+```shell
+$ sudo apt-get install python3-pip
+```
+
       
       
       
