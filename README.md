@@ -21,15 +21,16 @@ The telegram bot **HERDAY** developed by our Team **Brainy Bytes** is a a menstr
       
  ## How to Configure:
 
-*1.Installing pip[python Package Manager]
-```shell
+1.Installing pip[python Package Manager]
+```console
 $ sudo apt-get install python3-pip
 ```
-*2.Requirement files:
 
-```shell
+2. Requirement files:
+```console
 $ pip: -r requirements.txt
-```shell
+```
+
 
 ## Bot working demonstration:
 
