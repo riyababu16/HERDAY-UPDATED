@@ -43,7 +43,7 @@ $ pip: -r requirements.txt
 
 ## Bugs Found:
 
-As of now ,no errors or bugs were found.But We were not able to inculcate some of the features which we intially planned like providing information about the diet plan to help reduce discomfort during menstrual cycle.
+As of now ,no errors or bugs were found.But We were not able to inculcate some of the features which we intially planned like providing information about the diet plan to help reduce discomfort during menstrual cycle,detailed analysis of irregularities in the mesnstrual cycle along with notifying about various underlying health issue.
 
 
 
