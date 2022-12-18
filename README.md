@@ -14,20 +14,25 @@ The telegram bot **HERDAY** developed by our Team **Brainy Bytes** is a a menstr
 4.RIYA M BABU<br/>
 
 # Libraries Used:
-1 Telegram 
-  2.
+1 python-telegram- bot
+  
       
       
       
  ## How to Configure:
 
-**1.Installing pip[python Package Manager]
+*1.Installing pip[python Package Manager]
 ```shell
 $ sudo apt-get install python3-pip
 ```
+*2.Requirement files:
 
+```shell
 pip: -r requirements.txt
+**Bot working demonstration
+![screenshot HERDAY Bot Chat](https://user-images.githubusercontent.com/120733525/208286012-274dff42-120f-4372-ad56-ec477efe464c.jpg)
 
+```
 
 
 
